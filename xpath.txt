@@ -1,0 +1,88 @@
+Relative Xpath:
+
+============
+
+
+Attribute Based:
+
+---------------------
+
+//TagName[@attribute = 'attribute value']
+
+
+
+//input[@type = 'password']
+
+
+
+
+
+Multiple Attributes
+
+------------------------
+
+
+//input[@class = 'inputLogin'][@type='password]
+
+
+
+//input[@class = 'inputLogin' and @type = 'password']
+
+
+
+//input[@class = 'inputLogin123' or @type = 'password']
+
+
+
+
+Text Based xpath:
+
+------------------------
+
+
+//TagName[text()='text value']
+
+
+
+//label[text()='Username']
+
+
+
+Collection Based xpath:
+-------------------------------
+
+
+(xpath)[index]
+
+
+
+(//input)[2]
+
+
+
+(//input[@class = 'inputLogin'])[2]
+
+
+
+(//input[@class = 'inputLogin'][@size='50'])[2]
+
+
+
+
+
+Partial Match
+
+-------------------
+
+
+//TagName[contains(text(),'partialvalue')]
+
+
+//h2[contains(text(),'Leaftaps')]
+
+
+
+//TagName[contains(@attribute,'partial value')]
+
+
+//label[contains(@for,'user')]
