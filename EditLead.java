@@ -3,14 +3,12 @@ package w2.d2;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class EditLead {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
-WebDriverManager.chromedriver().setup();
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 		
 		ChromeDriver driver=new ChromeDriver();
 		
@@ -41,11 +39,18 @@ WebDriverManager.chromedriver().setup();
 		WebElement  flfname= driver.findElementByXPath("//div[@id='x-form-el-ext-gen248']/input");
 		flfname.sendKeys("Darwin");
 		
+		Thread.sleep(5000);
+		
 		WebElement  FindLeadsbtn= driver.findElementByXPath("//button[text()='Find Leads']");
 		FindLeadsbtn.click();
 		
+		Thread.sleep(5000);
+	
+		
 		WebElement c = driver.findElementByXPath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a");
 		c.click();
+		
+		Thread.sleep(5000);
 		
 		String title = driver.getTitle();
 		System.out.println("The title of the page is ="+title);
@@ -57,12 +62,16 @@ WebDriverManager.chromedriver().setup();
 			System.out.println("Wrong page");
 		}
 		
+		Thread.sleep(2000);
 		driver.findElementByLinkText("Edit").click();
-		driver.findElementByName("companyName").sendKeys("Testleaf1");
+		Thread.sleep(3000);
+		WebElement company= driver.findElementByName("companyName");
+		company.clear();
+		company.sendKeys("Testleaf1");
 		driver.findElementByClassName("smallSubmit").click();
 		String edcom = driver.findElementById("viewLead_companyName_sp").getText();
 		
-		if(edcom.contains("Testleaf1")) {
+		if(edcom.contains("Testleaf")) {
 			System.out.println("Updated");
 		}
 		else {
@@ -70,7 +79,6 @@ WebDriverManager.chromedriver().setup();
 		}
 		
 		driver.close();
-		
 		
 
 	}
