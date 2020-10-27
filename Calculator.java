@@ -1,20 +1,66 @@
-package w2.d2;
+package W3.D1;
 
 public class Calculator {
+	
+	
+	public void add(int a,int b) {
+		
+		System.out.println("The sum of two var"+(a+b));
+	}
+	
+	public void add(int a,int b,int c) {
+		
+		System.out.println("The sum of three var"+(a+b));
+	}
+	
+	
+	public void mul(int a,int b) {
+		
+		System.out.println("The mul of two var"+(a*b));
+	}
+	
+	
+	public void mul(int a,double b) {
+		
+		System.out.println("The sub of two var"+(a-b));
+	}
 
+	public void sub(double a,double b) {
+		
+		System.out.println("The sub of two var"+(a-b));
+	}
+	
+	
+	public void sub(int a,int b) {
+		
+		System.out.println("The sub of two var"+(a-b));
+	}
+	
+	public void div(double a,int b) {
+		
+		System.out.println("The div of two var"+(a/b));
+	}
+	
+	public void div(int a,int b) {
+		
+		System.out.println("The div of two var"+(a/b));
+	}
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		Calculator c=new Calculator();
 		
-		MyCalc cal=new MyCalc();
+		c.add(10, 15);
+		c.add(10, 15, 25);
+		c.mul(10, 1458);
+		c.mul(15, 25);
+		c.sub(54451, 4545454);
+		c.sub(25, 15);
+		c.div(10, 5);
+		c.div(44545, 2);
 		
-		System.out.println(cal.name);
-		System.out.println(cal.version);
-		
-		System.out.println("the sum of "+cal.add(10,20));
-		System.out.println("the sub of "+cal.sub(2522,54));
-		System.out.println("the mul of "+cal.mul(11.25f,25.54f));
-		System.out.println("the div of "+cal.div(5525,525));
 
 	}
 
