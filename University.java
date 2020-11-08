@@ -1,6 +1,6 @@
 package W3.D2;
 
-public abstract class University {
+public abstract class University extends  Desktop {
 	
 	
 	public void pg() {
@@ -12,5 +12,8 @@ public abstract class University {
 	public abstract void ug();
 	
 	
-
+ 
 }
+	
+	
+
