@@ -8,11 +8,10 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class EditLeadDP extends BaseClassDP {
+public class DuplicateLeadDP extends BaseClassDP {
 
-	@Test(dataProvider = "efetchData")
-	public void runEditLead(String phno,String cname) throws InterruptedException  {
-		
+	@Test(dataProvider ="fetchData" )
+	public  void runDuplicateLead(String phno) throws InterruptedException {
 		
 		driver.findElementByLinkText("Find Leads").click();
 		driver.findElementByXPath("//span[text()='Phone']").click();
@@ -20,26 +19,25 @@ public class EditLeadDP extends BaseClassDP {
 		driver.findElementByXPath("//button[text()='Find Leads']").click();
 		Thread.sleep(2000);
 		driver.findElementByXPath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a").click();
-		driver.findElementByLinkText("Edit").click();
-		driver.findElementById("updateLeadForm_companyName").sendKeys(cname);
+		driver.findElementByLinkText("Duplicate Lead").click();
 		driver.findElementByName("submitButton").click();
 		
 }
-	@DataProvider(name="efetchData")
+	@DataProvider(name="fetchData")
 	public String[][] sendData() {
 		
-		String[][] edata=new String[2][2];
+		String[][] data=new String[2][1];
 		
-		edata[0][0]="9";
-		edata[0][1]="TCS";
+		data[0][0]="9";
 		
 		
-		edata[1][0]="9";
-		edata[1][1]="CTS"; 
+		data[1][0]="9";
 		
-		return edata;
+		
+		return data;
 		
 	}
+	
 	
 }
 
