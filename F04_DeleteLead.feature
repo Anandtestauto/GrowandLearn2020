@@ -14,19 +14,19 @@ Then My Home page should be displayed
 When click on Lead page
 Then click on Find Leads
 When click on phno tab
-Then Enter phno as <phno>
-When Click on FindLeads BUTTON 
-Then Get the leadid
-Then click on First Element 
+And Enter phno as <phno>
+And Click on FindLeads BUTTON 
+And Get the leadid
+And click on First Element 
 And Click on Delete Button 
-When Click on FindLeads BUTTON
-Then supply the leadid
+And click on Find Leads
+And supply the leadid as <leadval>
 When Click on FindLeads BUTTON
 Then Get the message
 And confirm the message
 
 
 Examples:
-|Username|Password|phno|
-|demosalesmanager|crmsfa|9|
-|demosalesmanager|crmsfa|9|
+|Username|Password|phno|leadval|
+|demosalesmanager|crmsfa|9|leadID|
+#|demosalesmanager|crmsfa|9|

@@ -14,11 +14,11 @@ Then My Home page should be displayed
 When click on Lead page
 Then click on Find Leads
 When click on phno tab
-Then Enter phno as <phno>
-When Click on FindLeads BUTTON 
-Then click on First Element 
-When Click on Edit Button 
-Then Enter company name <Cnmae>
+And Enter phno as <phno>
+And Click on FindLeads BUTTON 
+And click on First Element 
+And Click on Edit Button 
+And Enter Edit company name <Cnmae>
 When Click on Submit button
 Then get the title
  

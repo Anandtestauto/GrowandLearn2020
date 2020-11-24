@@ -13,7 +13,7 @@ When click on CRM/SFA link
 Then My Home page should be displayed
 When click on Lead page
 Then create lead page should be displayed
-Given Enter company name <cname>
+And Enter company name <cname>
 And Enter first name as <fname>
 And Enter Last name as <Lname>
 When click on submit button
