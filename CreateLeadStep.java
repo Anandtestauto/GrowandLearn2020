@@ -1,5 +1,6 @@
 package steps;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -31,7 +32,7 @@ public class CreateLeadStep extends BaseClass  {
 		driver.findElementByLinkText("Create Lead").click();
 	}
 
-	@Given("Enter company name (.*)")
+	@And("Enter company name (.*)")
 	public void enterCompanyname(String Cname) {
 		driver.findElementById("createLeadForm_companyName").sendKeys(Cname);
 		

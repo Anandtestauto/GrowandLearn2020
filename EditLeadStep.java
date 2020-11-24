@@ -1,5 +1,6 @@
 package steps;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -15,31 +16,32 @@ public class EditLeadStep extends BaseClass{
 		driver.findElementByXPath("//span[text()='Phone']").click();
 	}
 
-	@Then("Enter phno as (.*)")
+	@And("Enter phno as (.*)")
 	public void enterPhnoAsPhno(String PHNO) {
 		driver.findElementByXPath("//input[@name='phoneNumber']").sendKeys(PHNO);
 	}
 
-	@When("Click on FindLeads BUTTON")
+	@And("Click on FindLeads BUTTON")
 	public void clickOnFindLeadsBUTTON() throws InterruptedException {
 		driver.findElementByXPath("//button[text()='Find Leads']").click();
 		Thread.sleep(4000);
 	}
 
-	@Then("click on First Element")
+	@And("click on First Element")
 	public void clickOnFirstElement() {
 		
 		driver.findElementByXPath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a").click();
 	}
 
-	@When("Click on Edit Button")
+	@And("Click on Edit Button")
 	public void clickOnEditButton() {
 		driver.findElementByLinkText("Edit").click();
 		
 	}
 	
-	@Then("Enter company name as (.*)")
-	public void enterCompanyName(String Company) {
+	@And("Enter Edit company name (.*)")
+	public void enterEditCompanyName(String Company) throws InterruptedException {
+		Thread.sleep(3000);
 		driver.findElementById("updateLeadForm_companyName").sendKeys(Company);
 		
 	}
