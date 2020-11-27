@@ -29,7 +29,11 @@ public class LearnTestNGAssertion {
 		
 		SoftAssert sa=new SoftAssert();
 		
+		// Hard assert and soft assert
 		
+		//Hard assert will stop execution for the remaining test cases
+		
+		// soft assert will throw exception but execute remaining need to use assetAll() method in last
 		
 		boolean enabled = driver.findElementByClassName("decorativeSubmit").isEnabled();
 		
