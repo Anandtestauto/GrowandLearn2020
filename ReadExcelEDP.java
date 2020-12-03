@@ -1,4 +1,4 @@
-package ExcelData;
+package util;
 
 
 
@@ -9,7 +9,9 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ReadExcelEDP {
+import Base.ProjectSpecificMthods;
+
+public class ReadExcelEDP extends ProjectSpecificMthods {
 
 	public static String[][] readexcelData(String Filename) throws IOException {
 		// TODO Auto-generated method stub
